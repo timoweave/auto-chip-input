@@ -1,13 +1,9 @@
 # material-ui-auto-chip-input
 
-## Installation
-
-```shell
-npm i --save material-ui-chip-input@next
-```
-
-**Note:** This is the version for @material-ui/core 4.3.1,
+This <AutoChipInput/> uses hooks, @material-ui/core 4.3.1,
 @material-ui/icons 4.2.1, react-select 3.0.4 or later.
+
+![Demo](images/demo.png)
 
 ## Usage
 
