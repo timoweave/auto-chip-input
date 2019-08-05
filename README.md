@@ -13,27 +13,33 @@ npm i --save material-ui-chip-input@next
 
 ```jsx
 import AutoChipInput from "material-ui-auto-chip-input";
+import { userYourAutoCompleteSuggestion } from './yourSuggestions';
 
-// uncontrolled input
-const {
-  isLoading // is text searching under way (waiting...)
-  search // the text used for searching
-  suggestedList // suggestion list of object
-  selectedList // list of object selected (support multiple)
-  setSearch // function to set serch
-  setSelectedList // funcion to set selectedList
-  setSuggestedList // function to set suggestedList
-} = useSuggestion();
-<AutoChipInput
-    title={"Search Movie"}
-    placeholder="Enter movie title here, please"
-    search={search}
-    setSearch={setSearch}
-    suggestedList={suggestedList}
-    selectedList={selectedList}
-    setSelectedList={setSelectedList}
-    isLoading={isLoading}
-    isMulti={isMulti}
-  />
+export const App = props => {
+  const {
+    isLoading // is text searching under way (waiting...)
+    search // the text used for searching
+    suggestedList // suggestion list of object
+    selectedList // list of object selected (support multiple)
+    setSearch // function to set serch
+    setSelectedList // funcion to set selectedList
+    setSuggestedList // function to set suggestedList
+  } = useYourAutoCompleteSuggestion();
 
+  return (
+    <div>
+      <AutoChipInput
+          title={"Search Movie"}
+          placeholder="Enter movie title here, please"
+          search={search}
+          setSearch={setSearch}
+          suggestedList={suggestedList}
+          selectedList={selectedList}
+          setSelectedList={setSelectedList}
+          isLoading={isLoading}
+          isMulti={isMulti}
+        />
+    </div>
+  );
+}
 ```
