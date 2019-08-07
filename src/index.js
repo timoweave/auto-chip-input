@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import AutoChipInput from "./autoChipInput";
+import AutoChipInput2 from "./input2";
 import { useOmdb } from "./omdb";
 
 const Container = styled.div`
@@ -27,7 +27,7 @@ export const App = () => {
 			<h1>{title}</h1>
 			<h2>{subTitle}</h2>
 			<Center>
-				<AutoChipInput
+				<AutoChipInput2
 					title={"Search Movie"}
 					placeholder="Enter movie title here, please"
 					search={search}

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { AutoChipInput } from "./autoChipInput";
+import { AutoChipInput2 } from "./input2";
 import { useOmdb } from "./omdb";
 
 const Container = styled.div`
@@ -27,6 +28,17 @@ export const App = props => {
 		<Container>
 			<h1>{title}</h1>
 			<AutoChipInput
+				title={"Search Movie"}
+				placeholder="Enter movie title here, please"
+				search={search}
+				setSearch={setSearch}
+				suggestedList={suggestedList}
+				selectedList={selectedList}
+				setSelectedList={setSelectedList}
+				isLoading={isLoading}
+				isMulti={isMulti}
+			/>
+			<AutoChipInput2
 				title={"Search Movie"}
 				placeholder="Enter movie title here, please"
 				search={search}
