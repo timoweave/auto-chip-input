@@ -306,6 +306,7 @@ const AutoChipInput = props => {
 			onInputChange={setSearch}
 			options={suggestedList}
 			isMulti={isMulti}
+			disabled={true}
 		/>
 	);
 };
@@ -330,7 +331,8 @@ AutoChipInput.propTypes = {
 	setSelectedList: PropTypes.func,
 	setSearch: PropTypes.func,
 	isLoading: PropTypes.bool,
-	onSelectedList: PropTypes.func
+	onSelectedList: PropTypes.func,
+	disabled: PropTypes.bool
 };
 
 AutoChipInput.defaultProps = {
@@ -338,6 +340,7 @@ AutoChipInput.defaultProps = {
 	placeholder: "Enter option",
 	isMulti: false,
 	isLoading: false,
+	disabled: true,
 	onSelectedList: value => {
 		console.warn({
 			message: "provide your own callback",
